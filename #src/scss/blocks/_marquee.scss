@@ -1,0 +1,37 @@
+.marquee-wrap {
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 220px;
+  @media screen and (max-width: 600px){
+    padding-bottom: 80px;
+  };
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee 150s linear infinite;
+}
+
+.marquee p {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 260px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  opacity: 0.2;
+  @media screen and (max-width: 600px){
+    font-size: 100px;
+  };
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}

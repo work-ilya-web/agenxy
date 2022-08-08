@@ -1,0 +1,30 @@
+.what-do {
+  padding-bottom: 240px;
+  @media screen and (max-width: 991px){
+    padding-bottom: 100px;
+  };
+  @media screen and (max-width: 575px){
+    padding-bottom: 80px;
+  };
+  .section-title {
+    margin-bottom: 88px;
+    @media screen and (max-width: 768px){
+      margin-bottom: 50px;
+    };
+    @media screen and (max-width: 575px){
+      margin-bottom: 30px;
+    };
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(400px, 507px));
+    column-gap: 24px;
+    row-gap: 24px;
+    @media screen and (max-width: 1500px){
+      grid-template-columns: repeat(auto-fit, minmax(470px, 1fr));
+    };
+    @media screen and (max-width: 575px){
+      grid-template-columns: 1fr;
+    };
+  }
+}

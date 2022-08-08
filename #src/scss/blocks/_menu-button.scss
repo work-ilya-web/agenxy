@@ -1,0 +1,25 @@
+.menu-button {
+  display: flex;
+  align-items: center;
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    color: $white;
+  }
+  .burger {
+    margin-left: 16px;
+    width: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 16px;
+    span {
+      background-color: $white;
+      display: block;
+      height: 100%;
+      width: 2px;
+      transition: all .3s ease;
+    }
+  }
+}

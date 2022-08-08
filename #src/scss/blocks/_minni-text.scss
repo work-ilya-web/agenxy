@@ -1,0 +1,24 @@
+.minni-text {
+  max-width: 772px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__caption {
+    font-weight: 400;
+    font-size: 27px;
+    color: $white;
+    line-height: 120%;
+    margin-bottom: 24px;
+  }
+  &__descr {
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 120%;
+    color: $gray;
+  }
+  .btn {
+    margin-top: 48px;
+  }
+}

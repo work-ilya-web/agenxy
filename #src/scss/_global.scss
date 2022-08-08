@@ -1,0 +1,143 @@
+p {
+  margin: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-weight: 400;
+  font-family: 'TTHoves';
+}
+
+
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  background: none;
+  font-family: 'TTHoves';
+  font-weight: 500;
+}
+
+input,textarea {
+  font-family: 'TTHoves';
+  font-weight: 400;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+  &[type=number] {
+    -moz-appearance: textfield;
+  }
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+     margin: 0;
+  }
+  &:not([type='checkbox']):not([type='radio']) {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+}
+a {
+  text-decoration: none;
+  transition: all .2s linear;
+  &:hover {
+    color: $purple;
+  }
+}
+
+.btn {
+  position: relative;
+  z-index: 2;
+  &--light {
+    .top, .behind {
+      background-color: $white;
+    }
+    .text {
+      color: $dark;
+    }
+  }
+  &--dark {
+    .top, .behind {
+      background-color: $purple;
+    }
+    .text {
+      color: $white;
+    }
+  }
+  .text {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    z-index: 2;
+    padding: 16.5px 37.3px;
+    position: relative;
+    white-space: nowrap;
+    top: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .behind, .top {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    clip-path: polygon(0 0,calc(100% - 6.00px) 0,calc(100% - 3px) 3px,100% 6.00px,100% 100%,6.00px 100%,3px calc(100% - 3px),0 calc(100% - 6.00px));
+    z-index: -1;
+  }
+  .behind {
+    top: -1px;
+    right: 0;
+  }
+  .top {
+    bottom: -7px;
+    left: 14px;
+  }
+
+}
+.logo {
+  display: block;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  &--light {
+    svg {
+      fill: $white;
+    }
+  }
+  &--small {
+    width: 161px;
+    height: 29px;
+    @media screen and (max-width: 575px){
+      width: 110px;
+      height: 22px;
+    };
+  }
+}
+
+.main-title {
+  font-weight: 400;
+  line-height: 100%;
+  color: $white;
+  @include font-size(45px, 134px);
+}
+.section-title {
+  font-weight: 400;
+  font-size: 114px;
+  line-height: 110%;
+  color: $white;
+  @include font-size(35px, 114px);
+}

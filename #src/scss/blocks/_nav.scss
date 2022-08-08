@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  align-items: center;
+  &__link {
+    color: $white;
+    &:hover {
+      color: $purple;
+    }
+    &:not(:last-child) {
+      margin-right: 47px;
+      position: relative;
+      &::before {
+        content: "/";
+        position: absolute;
+        right: -24px;
+        color: $white;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+
+  }
+}

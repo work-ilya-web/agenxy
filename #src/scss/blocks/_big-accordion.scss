@@ -1,0 +1,6 @@
+.big-accordion {
+  padding-top: 140px;
+  @media screen and (max-width: 575px){
+    padding-top: 0;
+  };
+}

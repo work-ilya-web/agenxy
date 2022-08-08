@@ -1,0 +1,40 @@
+.header {
+  padding: 55px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  @media screen and (max-width: 575px){
+    padding: 25px 0;
+  };
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__actions {
+    display: flex;
+    align-items: center;
+  }
+  .nav {
+    margin-right: 126px;
+    @media screen and (max-width: 991px){
+      margin-right: 60px;
+    };
+    @media screen and (max-width: 860px){
+      display: none;
+    };
+  }
+  &--light {
+    .nav {
+      &__link {
+        color: $dark_2;
+      }
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+
+}
